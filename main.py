@@ -5,19 +5,19 @@ def relu(x):
 def sigmoid(x):
     return 1 / (1 + np.exp(-x))
 #  weights
-W1 = np.array([0.5, -0.2, 0.3])      # Hidden Layer 1 weights
-W2 = np.array([0.4, 0.1, -0.5])      # Hidden Layer 2 weights
+W1 = np.array([0.5, -0.2, 0.3])      # Hidden Node 1 weights
+W2 = np.array([0.4, 0.1, -0.5])      # Hidden Node 2 weights
 Wout = 1                              # Output layer weight
 
 def forward(x):
 
-    # Hidden Layer 1 : ReLU
+    # ReLU
     z1 = np.sum(x * W1)
     h1 = relu(z1)
-    # Hidden Layer 2 : Sigmoid
+    # Sigmoid
     z2 = h1 * np.sum(W2)
     h2 = sigmoid(z2)
-    # Output : Sigmoid
+    # Sigmoid
     z3 = h2 * Wout
     output = sigmoid(z3)
     return output
