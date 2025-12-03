@@ -27,6 +27,11 @@ def forward(x):
 x = np.array([1, 0, 1])
 result = forward(x)
 print("Final Output:", result)
+if result >= 0.5:
+    print("Spam Detected: YES (Probability >= 0.5)")
+else:
+    print("Spam Detected: NO (Probability < 0.5)")
 
 
 #Final Output: 0.6224593312018546
+#Spam Detected: YES (Probability >= 0.5)
